@@ -1,0 +1,11 @@
+<div class ="dashboard-container">
+    <h1>Bienvenidos al Dashboard</h1>
+    <button (click)="logout()" class="logout-button">Cerrar sesión</button>
+    <div +ngIf="data; else loading">
+        <h2>Tus Datos:</h2>
+        <pre>{{ data | json }}</pre>
+    </div>
+    <ng-template #loading>
+        <p>Cargando datos</p>
+    </ng-template>
+</div>
